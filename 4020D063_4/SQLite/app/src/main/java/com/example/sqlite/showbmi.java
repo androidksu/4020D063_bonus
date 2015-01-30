@@ -28,14 +28,7 @@ public class showbmi extends Activity {
         show2 = (TextView) findViewById(R.id.textView5);
         String[] item = {"Name", "Height", "Weight", "BMI"};
         StringBuffer sb = new StringBuffer();
-        sb.append("姓名");
-        sb.append("\t");
-        sb.append("身高");
-        sb.append("\t\t\t");
-        sb.append("體重");
-        sb.append("\t\t\t");
-        sb.append("BMI");
-        sb.append("\n");
+        sb.append("歷史紀錄\n\n");
         // 開啟資料庫
         dbHelper = new SQLite(getBaseContext());
         db = dbHelper.getWritableDatabase();
@@ -44,13 +37,13 @@ public class showbmi extends Activity {
         c.moveToFirst();
 
         for (int i = 0; i < c.getCount(); i++) {
-            sb.append(c.getString(0));
-            sb.append("\t");
-            sb.append(c.getString(1));
-            sb.append("\t\t\t");
-            sb.append(c.getString(2));
-            sb.append("\t\t\t");
-            sb.append(c.getString(3));
+            sb.append("姓名:" + c.getString(0));
+            sb.append("\n");
+            sb.append("身高:" + c.getString(1));
+            sb.append("\n");
+            sb.append("體重:" + c.getString(2));
+            sb.append("\n");
+            sb.append("BMI:" + c.getString(3));
             sb.append("\n\n");
             c.moveToNext();
         }
