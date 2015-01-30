@@ -1,0 +1,2 @@
+C:\Users\ITL\AndroidStudioProjects\SQLite\app\build\intermediates\classes\debug
+C:\Users\ITL\AndroidStudioProjects\SQLite\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-5f91e707a44d8b702fc34bebf538fefb7a373eb7.jar
